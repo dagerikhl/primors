@@ -25,6 +25,7 @@
   "scripts": {
     "build": "yarn clean && tsc",
     "clean": "rm -rf ./lib",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
     "prepublishOnly": "yarn build",
     "lint": "eslint src/",
     "storybook": "start-storybook -p 6006",
@@ -51,6 +52,7 @@
     "@storybook/react": "6.0.26",
     "@typescript-eslint/eslint-plugin": "4.4.0",
     "@typescript-eslint/parser": "4.4.0",
+    "auto-changelog": "2.2.1",
     "babel-loader": "8.1.0",
     "eslint": "7.11.0",
     "eslint-plugin-jsx-a11y": "6.3.1",
