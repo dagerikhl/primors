@@ -1,0 +1,53 @@
+{
+  "name": "primors",
+  "version": "0.0.0",
+  "description": "Package library for common React functionalities.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dagerikhl/primors"
+  },
+  "author": "Løvgren, Dag Erik <dagerikhl@gmail.com>",
+  "license": "GPL-3.0-only",
+  "private": false,
+  "keywords": [
+    "packages",
+    "library",
+    "components",
+    "hooks",
+    "react"
+  ],
+  "bugs": "https://github.com/dagerikhl/primors/issues",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "build": "yarn clean && tsc",
+    "clean": "rm -rf ./lib",
+    "prepublishOnly": "yarn build",
+    "lint": "eslint src/"
+  },
+  "peerDependencies": {
+    "react": "~16.13.1",
+    "react-dom": "~16.13.1"
+  },
+  "dependencies": {
+    "@types/react": "16.9.51",
+    "@types/react-dom": "16.9.8",
+    "@types/styled-components": "5.1.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "styled-components": "5.2.0",
+    "typescript": "4.1.0-beta"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.4.0",
+    "@typescript-eslint/parser": "4.4.0",
+    "eslint": "7.11.0",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-react": "7.21.4",
+    "eslint-plugin-react-hooks": "4.1.2",
+    "prettier": "2.1.2"
+  }
+}
