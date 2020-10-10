@@ -1,26 +1,17 @@
 import { Story, Meta } from "@storybook/react";
 import React from "react";
-import { StorybookHookComponent } from "../_internal/StorybookHookComponent/StorybookHookComponent";
+import { StorybookHookResult } from "../_internal/components/StorybookHookResult/StorybookHookResult";
 import { useDebounce, UseDebounceProps } from "./useDebounce";
 
 export default {
   title: "Hooks/useDebounce",
-  // TODO Should not show the `hook` and `args` props in story
-  component: StorybookHookComponent,
+  component: StorybookHookResult,
 } as Meta;
 
-const Template: Story<UseDebounceProps<string>> = (args) => {
-  const hook = useDebounce;
+const Template: Story<UseDebounceProps<string>> = ({ value, delay }) => {
+  const result = useDebounce(value, delay);
 
-  const result = hook(args.value, args.delay);
-
-  return (
-    <div>
-      <div>Result:</div>
-
-      <code>{JSON.stringify(result)}</code>
-    </div>
-  );
+  return <StorybookHookResult hookResult={result} />;
 };
 
 export const UseDebounce = Template.bind({});

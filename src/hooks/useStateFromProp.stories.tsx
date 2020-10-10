@@ -1,16 +1,17 @@
 import { Story, Meta } from "@storybook/react";
 import React from "react";
-import { StorybookHookComponent } from "../_internal/StorybookHookComponent/StorybookHookComponent";
+import { StorybookHookResult } from "../_internal/components/StorybookHookResult/StorybookHookResult";
 import { useStateFromProp, UseStateFromPropProps } from "./useStateFromProp";
 
 export default {
   title: "Hooks/useStateFromProp",
-  // TODO Should not show the `hook` and `args` props in story
-  component: StorybookHookComponent,
+  component: StorybookHookResult,
 } as Meta;
 
-const Template: Story<UseStateFromPropProps<string>> = (args) => {
-  return <StorybookHookComponent hook={useStateFromProp} args={[args.prop]} />;
+const Template: Story<UseStateFromPropProps<string>> = ({ prop }) => {
+  const result = useStateFromProp(prop);
+
+  return <StorybookHookResult hookResult={result} />;
 };
 
 export const UseStateFromProp = Template.bind({});
