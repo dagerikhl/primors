@@ -2,6 +2,23 @@
 
 Package library for common React functionalities.
 
+## Contents
+
+### Components
+
+| Component | Description                                                                                   |
+| :-------- | :-------------------------------------------------------------------------------------------- |
+| Rig       | Provides a basic component to control layout. Takes props to control flex layout and padding. |
+
+### Hooks
+
+No hooks yet.
+
+| Hook             | Description                                                |
+| :--------------- | :--------------------------------------------------------- |
+| useDebounce      | Debounces the value given with a given delay.              |
+| useStateFromProp | Refreshes the value of the state if the give prop changes. |
+
 ## Technology
 
 This library is built using:
