@@ -31,6 +31,10 @@ For development, these comfort-packages are used:
 - [ESLint](https://eslint.org/).
 - [Prettier](https://prettier.io/).
 
+And for creating a view of the components for development:
+
+- [Storybook](https://storybook.js.org/).
+
 ## Author
 
 [Dag Erik Løvgren (dagerikhl)](https://github.com/dagerikhl)
