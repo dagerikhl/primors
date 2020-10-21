@@ -1,11 +1,11 @@
 import { Story, Meta } from "@storybook/react";
-import React from "react";
+import React, { FC } from "react";
 import { StorybookHookResult } from "../_internal/components/StorybookHookResult/StorybookHookResult";
 import { useStateFromProp, UseStateFromPropProps } from "./useStateFromProp";
 
 export default {
   title: "Hooks/useStateFromProp",
-  component: StorybookHookResult,
+  component: (useStateFromProp as unknown) as FC<UseStateFromPropProps<string>>,
   parameters: {
     docs: {
       description: {
@@ -17,12 +17,23 @@ But beware! If you pass something like an object or array that is generated ever
       },
     },
   },
+  argTypes: {
+    prop: {
+      description:
+        "The initial value to use, as well as the value to listen for changes on.",
+      table: {
+        type: {
+          summary: "any",
+        },
+      },
+    },
+  },
 } as Meta;
 
-const Template: Story<UseStateFromPropProps<string>> = ({ prop }) => {
-  const result = useStateFromProp(prop);
-
-  return <StorybookHookResult hookResult={result} />;
+const Template: Story<UseStateFromPropProps<string>> = (args) => {
+  return (
+    <StorybookHookResult hook={useStateFromProp} args={Object.values(args)} />
+  );
 };
 
 export const UseStateFromProp = Template.bind({});
