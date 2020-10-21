@@ -6,6 +6,13 @@ import { useDebounce, UseDebounceProps } from "./useDebounce";
 export default {
   title: "Hooks/useDebounce",
   component: StorybookHookResult,
+  parameters: {
+    docs: {
+      description: {
+        component: `Debounces the value it's passed by a certain delay.`,
+      },
+    },
+  },
 } as Meta;
 
 const Template: Story<UseDebounceProps<string>> = ({ value, delay }) => {

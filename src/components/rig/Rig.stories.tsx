@@ -6,6 +6,18 @@ import { Rig, RigProps } from "./Rig";
 export default {
   title: "Components/Rig",
   component: Rig,
+  parameters: {
+    docs: {
+      description: {
+        component: `\
+Provides easy ways to manipulate the layout of any elements placed inside it.
+
+Think of it as a supercharged \`div\`.
+
+Allows rendering as any element you choose, setting the layout of its children, as well as to control its own padding via props.`,
+      },
+    },
+  },
 } as Meta;
 
 const Item = styled.div`
