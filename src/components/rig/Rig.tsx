@@ -1,4 +1,4 @@
-import { createElement, FC, ReactHTML } from "react";
+import { createElement, FC } from "react";
 import styled, { css } from "styled-components";
 import { spaceSizes } from "../../_internal/constants/spaceSizes";
 import { FlexAlign } from "../../types/FlexAlign";
@@ -7,7 +7,7 @@ import { FlexJustify } from "../../types/FlexJustify";
 import { Space } from "../../types/Space";
 
 export interface RigProps {
-  as?: keyof ReactHTML;
+  as?: keyof JSX.IntrinsicElements | React.ComponentType;
   // Flex
   flexDirection?: FlexDirection;
   flexWrap?: boolean;
