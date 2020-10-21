@@ -24,10 +24,15 @@ const Template: Story<RigProps> = (args) => (
   </Rig>
 );
 
+export const As = Template.bind({});
+As.args = {
+  as: "button",
+};
+
 export const Flex = Template.bind({});
 Flex.args = {
-  wrap: true,
-  justify: "space-between",
+  flexWrap: true,
+  flexJustify: "space-between",
 };
 
 export const Spacing = Template.bind({});

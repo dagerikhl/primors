@@ -7,12 +7,12 @@ import { FlexJustify } from "../../types/FlexJustify";
 import { Space } from "../../types/Space";
 
 export interface RigProps {
-  element?: keyof ReactHTML;
+  as?: keyof ReactHTML;
   // Flex
-  direction?: FlexDirection;
-  wrap?: boolean;
-  justify?: FlexJustify;
-  align?: FlexAlign;
+  flexDirection?: FlexDirection;
+  flexWrap?: boolean;
+  flexJustify?: FlexJustify;
+  flexAlign?: FlexAlign;
   // Spacing
   top?: Space;
   right?: Space;
@@ -20,36 +20,36 @@ export interface RigProps {
   left?: Space;
 }
 
-const RigComponent: FC<RigProps> = ({ element = "div", children, ...rest }) =>
-  createElement(element as string, rest, children);
-
-export const Rig = styled(RigComponent)<RigProps>`
-  display: flex;
-
-  ${({ direction, wrap, justify, align }) => css`
-    ${direction &&
+const StyledRig = styled.div<RigProps>`
+  ${({ flexDirection, flexWrap, flexJustify, flexAlign }) => css`
+    ${(flexDirection || flexWrap || flexJustify || flexAlign) &&
     css`
-      flex-direction: ${direction};
+      display: flex;
+    `}
+
+    ${flexDirection &&
+    css`
+      flex-direction: ${flexDirection};
       align-items: ;
     `}
 
-    ${wrap &&
+    ${flexWrap &&
     css`
       flex-wrap: wrap;
     `}
-      ${wrap === false &&
+      ${flexWrap === false &&
     css`
       flex-wrap: nowrap;
     `}
 
-      ${justify &&
+      ${flexJustify &&
     css`
-      justify-content: ${justify};
+      justify-content: ${flexJustify};
     `}
 
-      ${align &&
+      ${flexAlign &&
     css`
-      align-items: ${align};
+      align-items: ${flexAlign};
     `}
   `}
 
@@ -72,3 +72,6 @@ export const Rig = styled(RigComponent)<RigProps>`
     `}
   `}
 `;
+
+export const Rig: FC<RigProps> = ({ as = "div", children, ...rest }) =>
+  createElement(StyledRig, { ...rest, as }, children);
