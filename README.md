@@ -1,5 +1,8 @@
 # Primors
 
+[![npm](https://img.shields.io/npm/v/primors.svg?maxAge=2592000)](https://www.npmjs.com/package/primors)
+[![downloads](https://img.shields.io/npm/dt/primors.svg?maxAge=2592000)](https://www.npmjs.com/package/primors)
+
 Package library for common React functionalities.
 
 ## Development
