@@ -1,6 +1,9 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
 export interface UseStateFromPropProps<S> {
+  /**
+   * The initial value to use, as well as the value to listen for changes on.
+   */
   prop: S;
 }
 export type UseStateFromProp = <S>(

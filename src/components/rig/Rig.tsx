@@ -7,16 +7,43 @@ import { FlexJustify } from "../../types/FlexJustify";
 import { Space } from "../../types/Space";
 
 export interface RigProps {
+  /**
+   * Allows using any element (standard HTML tag) or any React component as the element for this component.
+   */
   as?: keyof JSX.IntrinsicElements | React.ComponentType;
   // Flex
+  /**
+   * See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+   */
   flexDirection?: FlexDirection;
+  /**
+   * See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
+   */
   flexWrap?: boolean;
+  /**
+   * See https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+   */
   flexJustify?: FlexJustify;
+  /**
+   * See https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+   */
   flexAlign?: FlexAlign;
   // Spacing
+  /**
+   * Sets the top padding of the `Rig` container.
+   */
   top?: Space;
+  /**
+   * Sets the right padding of the `Rig` container.
+   */
   right?: Space;
+  /**
+   * Sets the bottom padding of the `Rig` container.
+   */
   bottom?: Space;
+  /**
+   * Sets the left padding of the `Rig` container.
+   */
   left?: Space;
 }
 

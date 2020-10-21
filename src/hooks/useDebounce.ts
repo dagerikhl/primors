@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 
 export interface UseDebounceProps<S> {
+  /**
+   * The `value` to be debounced.
+   */
   value: S;
+  /**
+   * The amount of time the hook waits before debouncing the `value`.
+   */
   delay?: number;
 }
 export type UseDebounce = <S>(
