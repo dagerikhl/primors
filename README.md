@@ -2,22 +2,54 @@
 
 Package library for common React functionalities.
 
-## Contents
+## Development
 
-### Components
+### Getting started
 
-| Component | Description                                                                                   |
-| :-------- | :-------------------------------------------------------------------------------------------- |
-| Rig       | Provides a basic component to control layout. Takes props to control flex layout and padding. |
+To install all dependencies, run:
 
-### Hooks
+```sh
+yarn install
+```
 
-No hooks yet.
+### Local development
 
-| Hook             | Description                                                |
-| :--------------- | :--------------------------------------------------------- |
-| useDebounce      | Debounces the value given with a given delay.              |
-| useStateFromProp | Refreshes the value of the state if the give prop changes. |
+To build the functionalities locally, run:
+
+```sh
+yarn build
+```
+
+To run the Storybook app locally, which listens for changes and hotreloads, run:
+
+```sh
+yarn storybook
+```
+
+You can also build a production build of the Storybook app locally by running:
+
+```sh
+yarn build-storybook
+```
+
+### Publishing
+
+To build and deploy a new version of the package, run:
+
+```sh
+yarn version
+yarn publish
+```
+
+`yarn version` automatically generates a new changelog in `CHANGELOG.md` based on all commits since last release, and bumps the version of the package in `package.json` and tags the release.
+
+### Linting
+
+To lint the project, I suggest installing the ESLint plugin in your editor, but to run it from terminal, run:
+
+```sh
+yarn lint
+```
 
 ## Technology
 
@@ -25,6 +57,7 @@ This library is built using:
 
 - [TypeScript](https://www.typescriptlang.org/).
 - [React](https://reactjs.org/).
+- [Styled Components](https://styled-components.com/).
 
 For development, these comfort-packages are used:
 
