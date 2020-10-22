@@ -2,6 +2,7 @@
 
 // Components
 
+export * from "./components/anchor/Anchor";
 export * from "./components/rig/Rig";
 
 // Hooks
