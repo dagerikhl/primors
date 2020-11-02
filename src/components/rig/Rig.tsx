@@ -32,19 +32,19 @@ export interface RigProps {
   /**
    * Sets the top padding of the `Rig` container.
    */
-  top?: Space;
+  top?: Space | boolean;
   /**
    * Sets the right padding of the `Rig` container.
    */
-  right?: Space;
+  right?: Space | boolean;
   /**
    * Sets the bottom padding of the `Rig` container.
    */
-  bottom?: Space;
+  bottom?: Space | boolean;
   /**
    * Sets the left padding of the `Rig` container.
    */
-  left?: Space;
+  left?: Space | boolean;
 }
 
 const StyledRig = styled.div<RigProps>`
@@ -83,19 +83,23 @@ const StyledRig = styled.div<RigProps>`
   ${({ top, right, bottom, left }) => css`
     ${top &&
     css`
-      padding-top: ${spaceSizes[top]}rem;
+      padding-top: ${top === true ? spaceSizes.medium : spaceSizes[top]}rem;
     `}
     ${right &&
     css`
-      padding-right: ${spaceSizes[right]}rem;
+      padding-right: ${right === true
+        ? spaceSizes.medium
+        : spaceSizes[right]}rem;
     `}
     ${bottom &&
     css`
-      padding-bottom: ${spaceSizes[bottom]}rem;
+      padding-bottom: ${bottom === true
+        ? spaceSizes.medium
+        : spaceSizes[bottom]}rem;
     `}
     ${left &&
     css`
-      padding-left: ${spaceSizes[left]}rem;
+      padding-left: ${left === true ? spaceSizes.medium : spaceSizes[left]}rem;
     `}
   `}
 `;

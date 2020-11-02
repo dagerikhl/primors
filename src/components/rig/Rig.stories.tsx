@@ -51,4 +51,5 @@ export const Spacing = Template.bind({});
 Spacing.args = {
   top: "xx-large",
   left: "small",
+  right: true,
 };
