@@ -6,7 +6,7 @@ import { FlexDirection } from "../../types/FlexDirection";
 import { FlexJustify } from "../../types/FlexJustify";
 import { Space } from "../../types/Space";
 
-export interface RigProps {
+interface OwnProps {
   /**
    * Allows using any element (standard HTML tag) or any React component as the element for this component.
    */
@@ -46,6 +46,8 @@ export interface RigProps {
    */
   left?: Space | boolean;
 }
+
+export type RigProps = OwnProps & React.HTMLAttributes<HTMLElement>;
 
 const StyledRig = styled.div<RigProps>`
   ${({ flexDirection, flexWrap, flexJustify, flexAlign }) => css`
