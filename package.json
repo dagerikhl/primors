@@ -1,6 +1,6 @@
 {
   "name": "primors",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Package library for common React functionalities.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
