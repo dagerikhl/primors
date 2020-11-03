@@ -59,7 +59,6 @@ const StyledRig = styled.div<RigProps>`
     ${flexDirection &&
     css`
       flex-direction: ${flexDirection};
-      align-items: ;
     `}
 
     ${flexWrap &&
