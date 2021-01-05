@@ -29,7 +29,7 @@
     "prepublishOnly": "yarn build",
     "lint": "eslint src/",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o docs-build"
   },
   "peerDependencies": {
     "react": ">=16",

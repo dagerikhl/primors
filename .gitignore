@@ -103,4 +103,6 @@ dist
 .tern-port
 
 # Project specific
+/docs/
+/docs-build/
 /lib/
