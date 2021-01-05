@@ -5,6 +5,10 @@
 
 Package library for common React functionalities.
 
+## Live documentation
+
+Storybook docs deployed on GH Pages: [https://dagerikhl.github.io/primors](https://dagerikhl.github.io/primors)
+
 ## Development
 
 ### Getting started
@@ -45,6 +49,8 @@ yarn publish
 ```
 
 `yarn version` automatically generates a new changelog in `CHANGELOG.md` based on all commits since last release, and bumps the version of the package in `package.json` and tags the release.
+
+`yarn publish` deploys a new version to NPM as well as deploys a new version of the Storybook docs to GH Pages.
 
 ### Linting
 

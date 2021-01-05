@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/dagerikhl/primors"
   },
+  "homepage": "https://dagerikhl.github.io/primors",
   "author": "Løvgren, Dag Erik <dagerikhl@gmail.com>",
   "license": "GPL-3.0-only",
   "private": false,
