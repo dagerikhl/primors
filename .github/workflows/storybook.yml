@@ -2,11 +2,10 @@ name: Build and Deploy storybook docs to GH Pages
 
 on:
   push:
+    # TODO Only trigger on release tags when workflow works as expected
     # Trigger only on the main branch
     branches:
       - main
-    # Trigger the action only when files change in the folders defined here
-    paths: [".storybook/**", "src/**"]
 
 jobs:
   build-and-deploy:
@@ -17,16 +16,15 @@ jobs:
         with:
           persist-credentials: false
       - name: Install and Build
-        # Install npm packages and build the Storybook files
         run: |
           yarn install
           yarn build-storybook
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # The branch the action should deploy to
-          BRANCH: main
+          BRANCH: docs
           # The folder that the build-storybook script generates files
           FOLDER: docs-build
           # Automatically remove deleted files from the deploy branch
