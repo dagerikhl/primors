@@ -1,6 +1,5 @@
 import { Story, Meta } from "@storybook/react";
-import React, { FC } from "react";
-import { StorybookHookResult } from "../../_internal/components/StorybookHookResult/StorybookHookResult";
+import React, { FC, useState } from "react";
 import { useStateFromProp, UseStateFromPropProps } from "./useStateFromProp";
 
 export default {
@@ -30,9 +29,55 @@ But beware! If you pass something like an object or array that is generated ever
   },
 } as Meta;
 
-const Template: Story<UseStateFromPropProps<string>> = (args) => {
+const Template: Story<UseStateFromPropProps<string>> = ({ prop }) => {
+  const [value, setValue] = useState(prop);
+  const [valueFromProp, setValueFromProp] = useStateFromProp(prop);
+
+  const handleValueChange: React.ChangeEventHandler<HTMLInputElement> = (
+    event
+  ) => {
+    setValue(event.target.value);
+  };
+  const handleValueFromPropChange: React.ChangeEventHandler<HTMLInputElement> = (
+    event
+  ) => {
+    setValueFromProp(event.target.value);
+  };
+
   return (
-    <StorybookHookResult hook={useStateFromProp} args={Object.values(args)} />
+    <>
+      <div>
+        <h3>
+          With <code>useState</code>
+        </h3>
+
+        <label>
+          Change this value to update the value in the state:
+          <input value={value} onChange={handleValueChange} />
+        </label>
+
+        <code>
+          <div>prop: {prop}</div>
+          <div>value: {value}</div>
+        </code>
+      </div>
+
+      <div>
+        <h3>
+          With <code>useStateFromProp</code>
+        </h3>
+
+        <label>
+          Change this value to update the value in the state:
+          <input value={valueFromProp} onChange={handleValueFromPropChange} />
+        </label>
+
+        <code>
+          <div>prop: {prop}</div>
+          <div>value: {valueFromProp}</div>
+        </code>
+      </div>
+    </>
   );
 };
 
