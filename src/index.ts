@@ -2,10 +2,10 @@
 
 // Components
 
-export * from "./components/anchor/Anchor";
-export * from "./components/rig/Rig";
+export * from "./components/Anchor/Anchor";
+export * from "./components/Rig/Rig";
 
 // Hooks
 
-export * from "./hooks/useDebounce";
-export * from "./hooks/useStateFromProp";
+export * from "./hooks/useDebounce/useDebounce";
+export * from "./hooks/useStateFromProp/useStateFromProp";

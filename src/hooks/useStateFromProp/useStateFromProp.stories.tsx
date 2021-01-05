@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 import React, { FC } from "react";
-import { StorybookHookResult } from "../_internal/components/StorybookHookResult/StorybookHookResult";
+import { StorybookHookResult } from "../../_internal/components/StorybookHookResult/StorybookHookResult";
 import { useStateFromProp, UseStateFromPropProps } from "./useStateFromProp";
 
 export default {
