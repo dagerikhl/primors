@@ -1,4 +1,4 @@
-export type FlexAlign =
+export type FlexAlignItems =
   | "baseline"
   | "center"
   | "flex-end"

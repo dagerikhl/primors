@@ -1,9 +1,10 @@
 import { createElement, FC } from "react";
 import styled, { css } from "styled-components";
 import { spaceSizes } from "../../_internal/constants/spaceSizes";
-import { FlexAlign } from "../../types/FlexAlign";
+import { FlexAlignContent } from "../../types/FlexAlignContent";
+import { FlexAlignItems } from "../../types/FlexAlignItems";
 import { FlexDirection } from "../../types/FlexDirection";
-import { FlexJustify } from "../../types/FlexJustify";
+import { FlexJustifyContent } from "../../types/FlexJustifyContent";
 import { Space } from "../../types/Space";
 
 interface OwnProps {
@@ -11,6 +12,7 @@ interface OwnProps {
    * Allows using any element (standard HTML tag) or any React component as the element for this component.
    */
   as?: keyof JSX.IntrinsicElements | React.ComponentType;
+
   // Flex
   /**
    * See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
@@ -23,11 +25,16 @@ interface OwnProps {
   /**
    * See https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
    */
-  flexJustify?: FlexJustify;
+  flexJustifyContent?: FlexJustifyContent;
+  /**
+   * See https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
+   */
+  flexAlignContent?: FlexAlignContent;
   /**
    * See https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
    */
-  flexAlign?: FlexAlign;
+  flexAlignItems?: FlexAlignItems;
+
   // Spacing
   /**
    * Sets the top padding of the `Rig` container.
@@ -50,8 +57,18 @@ interface OwnProps {
 export type RigProps = OwnProps & React.HTMLAttributes<HTMLElement>;
 
 const StyledRig = styled.div<RigProps>`
-  ${({ flexDirection, flexWrap, flexJustify, flexAlign }) => css`
-    ${(flexDirection || flexWrap || flexJustify || flexAlign) &&
+  ${({
+    flexDirection,
+    flexWrap,
+    flexJustifyContent,
+    flexAlignContent,
+    flexAlignItems,
+  }) => css`
+    ${(flexDirection ||
+      flexWrap ||
+      flexJustifyContent ||
+      flexAlignContent ||
+      flexAlignItems) &&
     css`
       display: flex;
     `}
@@ -70,14 +87,19 @@ const StyledRig = styled.div<RigProps>`
       flex-wrap: nowrap;
     `}
 
-      ${flexJustify &&
+      ${flexJustifyContent &&
     css`
-      justify-content: ${flexJustify};
+      justify-content: ${flexJustifyContent};
     `}
 
-      ${flexAlign &&
+      ${flexAlignContent &&
     css`
-      align-items: ${flexAlign};
+      align-content: ${flexAlignContent};
+    `}
+
+      ${flexAlignItems &&
+    css`
+      align-items: ${flexAlignItems};
     `}
   `}
 
