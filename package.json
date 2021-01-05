@@ -26,10 +26,12 @@
     "build": "yarn clean && tsc",
     "clean": "rm -rf ./lib",
     "version": "auto-changelog -p && git add CHANGELOG.md",
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "yarn build && yarn deploy-storybook",
     "lint": "eslint src/",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build"
+    "build-storybook": "build-storybook -o docs",
+    "predeploy-storybook": "yarn build-storybook",
+    "deploy-storybook": "gh-pages -d docs"
   },
   "peerDependencies": {
     "react": ">=16",
@@ -58,6 +60,7 @@
     "eslint-plugin-jsx-a11y": "6.3.1",
     "eslint-plugin-react": "7.21.4",
     "eslint-plugin-react-hooks": "4.1.2",
+    "gh-pages": "3.1.0",
     "prettier": "2.1.2",
     "react-is": "16.13.1"
   }
