@@ -1,5 +1,8 @@
 import { Story, Meta } from "@storybook/react";
 import React, { FC, useState } from "react";
+
+import { StoryCode } from "../../_internal/components/storybook/StoryCode/StoryCode";
+
 import { useStateFromProp, UseStateFromPropProps } from "./useStateFromProp";
 
 export default {
@@ -72,10 +75,10 @@ const Template: Story<UseStateFromPropProps<string>> = ({ prop }) => {
           <input value={valueFromProp} onChange={handleValueFromPropChange} />
         </label>
 
-        <code>
+        <StoryCode>
           <div>prop: {prop}</div>
           <div>value: {valueFromProp}</div>
-        </code>
+        </StoryCode>
       </div>
     </>
   );

@@ -1,5 +1,4 @@
-import React from "react";
-import { FC, AnchorHTMLAttributes } from "react";
+import React, { FC, AnchorHTMLAttributes } from "react";
 
 const isExternal = (href?: string, target?: string): boolean =>
   !!(href?.startsWith("http") && target === "_blank");

@@ -7,5 +7,5 @@ export * from "./components/Rig/Rig";
 
 // Hooks
 
-export * from "./hooks/useDebounce/useDebounce";
+export * from "./hooks/useDebouncedState/useDebouncedState";
 export * from "./hooks/useStateFromProp/useStateFromProp";
