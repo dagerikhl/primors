@@ -5,6 +5,8 @@
 export * from "./components/Anchor/Anchor";
 export * from "./components/Rig/Rig";
 
+export * from "./components/typography/Code/Code";
+
 // Hooks
 
 export * from "./hooks/useDebouncedState/useDebouncedState";

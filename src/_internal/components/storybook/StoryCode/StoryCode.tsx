@@ -1,25 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-interface StoryCodeProps {
-  block?: boolean;
-}
+import { Code } from "../../../../components/typography/Code/Code";
 
-export const StoryCode = styled.code<StoryCodeProps>`
-  ${({ block }) =>
-    block
-      ? css`
-          display: block;
-
-          margin: 0.5rem 0;
-          padding: 1rem;
-
-          line-height: 1.5rem;
-        `
-      : css`
-          padding: 0 0.5rem;
-        `}
-
+export const StoryCode = styled(Code)`
   background-color: #f4f4f4;
-  border: 1px solid #555555;
-  border-radius: 4px;
 `;
