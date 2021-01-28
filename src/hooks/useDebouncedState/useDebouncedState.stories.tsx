@@ -58,16 +58,12 @@ const Template: Story<UseDebouncedStateProps<string>> = ({
 
   return (
     <>
-      <h3>
-        With <code>useStateFromProp</code>
-      </h3>
-
       <label>
         Change this value to update the value in the state:
         <input value={value} onChange={handleValueChange} />
       </label>
 
-      <StoryCode>
+      <StoryCode block>
         <div>initialValue: {initialValue}</div>
         <div>value: {value}</div>
         <div>debouncedValue: {debouncedValue}</div>

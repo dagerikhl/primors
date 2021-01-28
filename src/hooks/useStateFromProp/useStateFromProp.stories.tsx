@@ -51,7 +51,7 @@ const Template: Story<UseStateFromPropProps<string>> = ({ prop }) => {
     <>
       <div>
         <h3>
-          With <code>useState</code>
+          With <StoryCode>useState</StoryCode>
         </h3>
 
         <label>
@@ -59,15 +59,15 @@ const Template: Story<UseStateFromPropProps<string>> = ({ prop }) => {
           <input value={value} onChange={handleValueChange} />
         </label>
 
-        <code>
+        <StoryCode block>
           <div>prop: {prop}</div>
           <div>value: {value}</div>
-        </code>
+        </StoryCode>
       </div>
 
       <div>
         <h3>
-          With <code>useStateFromProp</code>
+          With <StoryCode>useStateFromProp</StoryCode>
         </h3>
 
         <label>
@@ -75,7 +75,7 @@ const Template: Story<UseStateFromPropProps<string>> = ({ prop }) => {
           <input value={valueFromProp} onChange={handleValueFromPropChange} />
         </label>
 
-        <StoryCode>
+        <StoryCode block>
           <div>prop: {prop}</div>
           <div>value: {valueFromProp}</div>
         </StoryCode>
