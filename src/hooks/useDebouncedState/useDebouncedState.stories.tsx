@@ -6,7 +6,7 @@ import { StoryCode } from "../../_internal/components/storybook/StoryCode/StoryC
 import { useDebouncedState, UseDebouncedStateProps } from "./useDebouncedState";
 
 export default {
-  title: "Hooks/useDebouncedState",
+  title: "Hooks/Use Debounced State",
   component: (useDebouncedState as unknown) as FC<
     UseDebouncedStateProps<string>
   >,

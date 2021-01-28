@@ -6,7 +6,7 @@ import { StoryCode } from "../../_internal/components/storybook/StoryCode/StoryC
 import { useStateFromProp, UseStateFromPropProps } from "./useStateFromProp";
 
 export default {
-  title: "Hooks/useStateFromProp",
+  title: "Hooks/Use State From Prop",
   component: (useStateFromProp as unknown) as FC<UseStateFromPropProps<string>>,
   parameters: {
     docs: {
