@@ -1,11 +1,11 @@
 import { createElement, FC } from "react";
 import styled, { css } from "styled-components";
-import { spaceSizes } from "../../_internal/constants/spaceSizes";
-import { FlexAlignContent } from "../../types/FlexAlignContent";
-import { FlexAlignItems } from "../../types/FlexAlignItems";
-import { FlexDirection } from "../../types/FlexDirection";
-import { FlexJustifyContent } from "../../types/FlexJustifyContent";
-import { Space } from "../../types/Space";
+import { spaceSizes } from "../../../_internal/constants/spaceSizes";
+import { FlexAlignContent } from "../../../types/FlexAlignContent";
+import { FlexAlignItems } from "../../../types/FlexAlignItems";
+import { FlexDirection } from "../../../types/FlexDirection";
+import { FlexJustifyContent } from "../../../types/FlexJustifyContent";
+import { Space } from "../../../types/Space";
 
 interface OwnProps {
   /**

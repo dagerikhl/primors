@@ -1,9 +1,10 @@
 import { Story, Meta } from "@storybook/react";
+import React from "react";
 
 import { Anchor, AnchorProps } from "./Anchor";
 
 export default {
-  title: "Components/Anchor",
+  title: "Components/Links/Anchor",
   component: Anchor,
   parameters: {
     docs: {
@@ -14,7 +15,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<AnchorProps> = Anchor;
+const Template: Story<AnchorProps> = (args) => <Anchor {...args} />;
 
 export const Internal = Template.bind({});
 Internal.args = {

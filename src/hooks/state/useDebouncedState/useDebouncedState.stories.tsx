@@ -1,12 +1,12 @@
 import { Story, Meta } from "@storybook/react";
 import React, { FC } from "react";
 
-import { StoryCode } from "../../_internal/components/storybook/StoryCode/StoryCode";
+import { StoryCode } from "../../../_internal/components/storybook/StoryCode/StoryCode";
 
 import { useDebouncedState, UseDebouncedStateProps } from "./useDebouncedState";
 
 export default {
-  title: "Hooks/Use Debounced State",
+  title: "Hooks/State/Use Debounced State",
   component: (useDebouncedState as unknown) as FC<
     UseDebouncedStateProps<string>
   >,

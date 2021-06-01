@@ -5,7 +5,8 @@ import styled from "styled-components";
 import { Rig, RigProps } from "./Rig";
 
 export default {
-  title: "Components/Rig",
+  // TODO Read this from the folder hierarchy
+  title: "Components/Layout/Rig",
   component: Rig,
   parameters: {
     docs: {
@@ -45,7 +46,7 @@ As.args = {
 export const Flex = Template.bind({});
 Flex.args = {
   flexWrap: true,
-  flexJustify: "space-between",
+  flexJustifyContent: "space-between",
 };
 
 export const Spacing = Template.bind({});

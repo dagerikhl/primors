@@ -1,12 +1,12 @@
 import { Story, Meta } from "@storybook/react";
 import React, { FC, useState } from "react";
 
-import { StoryCode } from "../../_internal/components/storybook/StoryCode/StoryCode";
+import { StoryCode } from "../../../_internal/components/storybook/StoryCode/StoryCode";
 
 import { useStateFromProp, UseStateFromPropProps } from "./useStateFromProp";
 
 export default {
-  title: "Hooks/Use State From Prop",
+  title: "Hooks/State/Use State From Prop",
   component: (useStateFromProp as unknown) as FC<UseStateFromPropProps<string>>,
   parameters: {
     docs: {
