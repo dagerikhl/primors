@@ -2,6 +2,7 @@
 
 // Components
 
+export * from "./components/layout/FlexRig/FlexRig";
 export * from "./components/layout/Rig/Rig";
 export * from "./components/links/Anchor/Anchor";
 export * from "./components/typography/Code/Code";
