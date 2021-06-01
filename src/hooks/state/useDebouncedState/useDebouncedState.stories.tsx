@@ -1,5 +1,5 @@
 import { Story, Meta } from "@storybook/react";
-import React, { FC } from "react";
+import { FC } from "react";
 
 import { StoryCode } from "../../../_internal/components/storybook/StoryCode/StoryCode";
 

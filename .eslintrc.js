@@ -1,5 +1,3 @@
-// TODO Fix Warning: React version not specified in eslint-plugin-react settings.
-//  See https://github.com/yannickcr/eslint-plugin-react#configuration
 module.exports = {
   env: {
     browser: true,
@@ -12,6 +10,11 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
   ],
+  settings: {
+    react: {
+      version: "latest",
+    },
+  },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -24,7 +27,6 @@ module.exports = {
   ignorePatterns: ["*.js", "lib/**/*"],
   rules: {
     "react/prop-types": "off",
-    // TODO Update TS and fix React JSX transform
-    // "react/react-in-jsx-scope": "off",
+    "react/react-in-jsx-scope": "off",
   },
 };
