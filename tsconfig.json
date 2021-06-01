@@ -1,3 +1,4 @@
+// Cannot upgrade to TS v4.3 yet because of https://github.com/styleguidist/react-docgen-typescript/issues/356
 {
   "compilerOptions": {
     "outDir": "lib",

@@ -4,7 +4,6 @@ import React from "react";
 import { Rig, RigProps } from "./Rig";
 
 export default {
-  // TODO Read this from the folder hierarchy
   title: "Components/Layout/Rig",
   component: Rig,
   parameters: {
