@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{github.ref}}
+      - run: echo ${GITHUB_REF##*/}
 
   release:
     name: Create release with release notes
