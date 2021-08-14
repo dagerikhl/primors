@@ -91,8 +91,8 @@ yarn deploy-storybook
 This project uses auto-changelog to automatically generate a changelog. You can use several prefixes matching the regex specified here in your commit messages to categorize commits in your changelog:
 
 - `Feat(ure)?:`: New features, _for the library_. Changes to the Storybook app should be categorized under "Performance".
-- `Fix:`: Bug fixes.
-- `Impr?(ovement)?:`: General improvements.
+- `Fix:`: Bug fixes, _for the library_.
+- `Impr?(ovement)?:`: General improvements, _for the library_.
 - `Perf(ormance)?:`: Performance improvements.
 - `Doc(umentation|s)?:`: Changes to documentation, e.g. `README.md` or the Storybook app.
 - `Build:`: Changes to the build or deploy environments.
