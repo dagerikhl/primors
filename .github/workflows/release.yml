@@ -9,7 +9,7 @@ jobs:
   release:
     name: Create release with release notes
     runs-on: ubuntu-latest
-    if: ${{github.ref == 'refs/heads/main'}}
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Get version from tag
         id: tag_name
