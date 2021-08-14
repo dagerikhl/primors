@@ -1,0 +1,7 @@
+import { Meta, Description } from "@storybook/addon-docs";
+import { getVersionedTitle } from "../../.storybook/utils/getVersionedTitle";
+import changelog from "../../CHANGELOG.md";
+
+<Meta title={`${getVersionedTitle()}/Changelog`} />
+
+<Description>{changelog}</Description>
