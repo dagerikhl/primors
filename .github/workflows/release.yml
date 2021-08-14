@@ -10,6 +10,7 @@ jobs:
     name: Debug
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{github}}
       - run: echo ${{github.ref}}
       - run: echo ${GITHUB_REF##*/}
 
