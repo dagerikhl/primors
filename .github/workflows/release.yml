@@ -6,6 +6,12 @@ on:
       - 'v*'
 
 jobs:
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{github.ref}}
+
   release:
     name: Create release with release notes
     runs-on: ubuntu-latest
