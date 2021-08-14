@@ -31,8 +31,8 @@
     "version": "yarn generate-changelog && git add CHANGELOG.md",
     "prepublishOnly": "yarn build",
     "lint": "eslint src/",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs",
+    "storybook": "start-storybook -s .storybook/public -p 6006",
+    "build-storybook": "build-storybook -s .storybook/public -o docs",
     "predeploy-storybook": "yarn build-storybook",
     "deploy-storybook": "gh-pages -d docs"
   },
