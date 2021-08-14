@@ -39,9 +39,9 @@ You can also build a production build of the Storybook app locally by running:
 yarn build-storybook
 ```
 
-### Publishing
+### Publishing npm package
 
-To build and deploy a new version of the package, run:
+To build and publish a new version of the package, run:
 
 ```sh
 yarn version
@@ -50,7 +50,15 @@ yarn publish
 
 `yarn version` automatically generates a new changelog in `CHANGELOG.md` based on all commits since last release, and bumps the version of the package in `package.json` and tags the release.
 
-`yarn publish` deploys a new version to NPM as well as deploys a new version of the Storybook docs to GH Pages.
+`yarn publish` deploys a new version to the NPM package registry.
+
+### Deploying Storybook app
+
+To build and deploy the Storybook live documentation app, run:
+
+```sh
+yarn deploy-storybook
+```
 
 #### Commit format
 
