@@ -1,5 +1,8 @@
 {
+  "package": true,
+  "template": "./auto-changelog/primors-changelog.hbs",
   "breakingPattern": "BREAKING CHANGE",
+  "issuePattern": "Fix:",
   "commitLimit": false,
   "sortCommits": "date-desc"
 }
