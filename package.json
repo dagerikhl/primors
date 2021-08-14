@@ -26,7 +26,7 @@
   "scripts": {
     "build": "yarn clean && tsc",
     "clean": "rm -rf ./lib",
-    "generate-changelog": "auto-changelog",
+    "generate-changelog": "auto-changelog && prettier -w CHANGELOG.md",
     "version": "yarn generate-changelog && git add CHANGELOG.md",
     "prepublishOnly": "yarn build",
     "lint": "eslint src/",
