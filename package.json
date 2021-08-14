@@ -29,7 +29,6 @@
     "generate-changelog": "auto-changelog",
     "version": "yarn generate-changelog && git add CHANGELOG.md",
     "prepublishOnly": "yarn build",
-    "postpublish": "yarn deploy-storybook",
     "lint": "eslint src/",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs",
