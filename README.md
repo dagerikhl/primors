@@ -52,6 +52,23 @@ yarn publish
 
 `yarn publish` deploys a new version to NPM as well as deploys a new version of the Storybook docs to GH Pages.
 
+#### Commit format
+
+This project uses auto-changelog to automatically generate a changelog. You can use several prefixes in your commit messages to categorize commits in your changelog:
+
+- `Feat(ure)?:`: New features, _for the library_. Changes to the Storybook app should be categorized under "Performance".
+- `Fix:`: Bug fixes.
+- `Impr?(ovement)?:`: General improvements.
+- `Perf(ormance)?:`: Performance improvements.
+- `Doc(umentation|s)?:`: Changes to documentation, e.g. `README.md` or the Storybook app.
+- `Build:`: Changes to the build or deploy environments.
+- `Conf(ig)?(uration)?:`: Changes to project configuration.
+- Any commits not matching one of these patterns will not be categorized.
+
+##### Breaking changes
+
+You can mark any commit as a breaking change by writing "BREAKING CHANGE" anywhere in your commit message.
+
 ### Linting
 
 To lint the project, I suggest installing the ESLint plugin in your editor, but to run it from terminal, run:
@@ -72,6 +89,7 @@ For development, these comfort-packages are used:
 
 - [ESLint](https://eslint.org/).
 - [Prettier](https://prettier.io/).
+- [AutoChangelog](https://github.com/CookPete/auto-changelog/).
 
 And for creating a view of the components for development:
 
