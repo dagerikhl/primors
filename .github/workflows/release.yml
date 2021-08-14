@@ -6,23 +6,9 @@ on:
       - 'v*'
 
 jobs:
-  debug:
-    name: Debug
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo ${{github.ref}}
-      - run: echo ${GITHUB_REF##*/}
-      - name: Get branch name
-        id: branch-name
-        uses: tj-actions/branch-names@v4.8
-      - name: Echo branch name
-        run: |
-          echo Running on: ${{steps.branch-name.outputs.current_branch}}
-
   release:
     name: Create release with release notes
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
       - name: Get version from tag
         id: tag_name
