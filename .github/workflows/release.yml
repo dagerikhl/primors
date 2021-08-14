@@ -2,7 +2,8 @@ name: Create GitHub release with release notes
 
 on:
   push:
-    tags: [v*]
+    tags:
+      - 'v*'
 
 jobs:
   release:
