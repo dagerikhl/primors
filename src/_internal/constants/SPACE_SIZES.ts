@@ -2,7 +2,7 @@ import { Space } from "../../types/Space";
 
 type SpaceSizes = { [key in Space]: number };
 
-export const spaceSizes: SpaceSizes = {
+export const SPACE_SIZES: SpaceSizes = {
   "xx-small": 0.25,
   "x-small": 0.5,
   small: 1,

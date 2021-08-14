@@ -1,7 +1,7 @@
 import { createElement, FC } from "react";
 import styled, { css } from "styled-components";
 
-import { spaceSizes } from "../../../_internal/constants/spaceSizes";
+import { SPACE_SIZES } from "../../../_internal/constants/SPACE_SIZES";
 import { Space } from "../../../types/Space";
 
 interface OwnProps {
@@ -36,23 +36,23 @@ const StyledRig = styled.div<RigProps>`
   ${({ top, right, bottom, left }) => css`
     ${top &&
     css`
-      padding-top: ${top === true ? spaceSizes.medium : spaceSizes[top]}rem;
+      padding-top: ${top === true ? SPACE_SIZES.medium : SPACE_SIZES[top]}rem;
     `}
     ${right &&
     css`
       padding-right: ${right === true
-        ? spaceSizes.medium
-        : spaceSizes[right]}rem;
+        ? SPACE_SIZES.medium
+        : SPACE_SIZES[right]}rem;
     `}
     ${bottom &&
     css`
       padding-bottom: ${bottom === true
-        ? spaceSizes.medium
-        : spaceSizes[bottom]}rem;
+        ? SPACE_SIZES.medium
+        : SPACE_SIZES[bottom]}rem;
     `}
     ${left &&
     css`
-      padding-left: ${left === true ? spaceSizes.medium : spaceSizes[left]}rem;
+      padding-left: ${left === true ? SPACE_SIZES.medium : SPACE_SIZES[left]}rem;
     `}
   `}
 `;
