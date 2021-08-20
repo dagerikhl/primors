@@ -11,7 +11,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: `Debounces the value it's passed by a certain delay.`,
+        component: "Debounces the value it's passed by a certain delay.",
       },
     },
   },
