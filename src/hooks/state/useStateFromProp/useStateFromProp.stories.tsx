@@ -6,8 +6,8 @@ import { StoryCode } from "../../../_internal/components/storybook/StoryCode/Sto
 import { useStateFromProp, UseStateFromPropProps } from "./useStateFromProp";
 
 export default {
-  title: "Hooks/State/Use State From Prop",
-  component: (useStateFromProp as unknown) as FC<UseStateFromPropProps<string>>,
+  title: "Hooks/State/useStateFromProp",
+  component: useStateFromProp as unknown as FC<UseStateFromPropProps<string>>,
   parameters: {
     docs: {
       description: {
@@ -41,11 +41,10 @@ const Template: Story<UseStateFromPropProps<string>> = ({ prop }) => {
   ) => {
     setValue(event.target.value);
   };
-  const handleValueFromPropChange: React.ChangeEventHandler<HTMLInputElement> = (
-    event
-  ) => {
-    setValueFromProp(event.target.value);
-  };
+  const handleValueFromPropChange: React.ChangeEventHandler<HTMLInputElement> =
+    (event) => {
+      setValueFromProp(event.target.value);
+    };
 
   return (
     <>
@@ -84,7 +83,7 @@ const Template: Story<UseStateFromPropProps<string>> = ({ prop }) => {
   );
 };
 
-export const UseStateFromProp = Template.bind({});
-UseStateFromProp.args = {
+export const Standard = Template.bind({});
+Standard.args = {
   prop: "Initial prop",
 };

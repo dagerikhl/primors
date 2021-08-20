@@ -6,10 +6,8 @@ import { StoryCode } from "../../../_internal/components/storybook/StoryCode/Sto
 import { useDebouncedState, UseDebouncedStateProps } from "./useDebouncedState";
 
 export default {
-  title: "Hooks/State/Use Debounced State",
-  component: (useDebouncedState as unknown) as FC<
-    UseDebouncedStateProps<string>
-  >,
+  title: "Hooks/State/useDebouncedState",
+  component: useDebouncedState as unknown as FC<UseDebouncedStateProps<string>>,
   parameters: {
     docs: {
       description: {
@@ -72,8 +70,8 @@ const Template: Story<UseDebouncedStateProps<string>> = ({
   );
 };
 
-export const UseDebouncedState = Template.bind({});
-UseDebouncedState.args = {
+export const Standard = Template.bind({});
+Standard.args = {
   initialValue: "Some text",
   delay: 400,
 };
