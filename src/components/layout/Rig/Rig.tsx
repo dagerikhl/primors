@@ -52,7 +52,9 @@ const StyledRig = styled.div<RigProps>`
     `}
     ${left &&
     css`
-      padding-left: ${left === true ? SPACE_SIZES.medium : SPACE_SIZES[left]}rem;
+      padding-left: ${left === true
+        ? SPACE_SIZES.medium
+        : SPACE_SIZES[left]}rem;
     `}
   `}
 `;
