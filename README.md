@@ -96,7 +96,7 @@ This project uses auto-changelog to automatically generate a changelog. You can 
 - `Perf(ormance)?:`: Performance improvements.
 - `Doc(umentation|s)?:`: Changes to documentation, e.g. `README.md` or the Storybook app.
 - `Build:`: Changes to the build or deploy environments.
-- `Conf(ig)?(uration)?:`: Changes to project configuration.
+- `Conf(ig(uration)?)?:`: Changes to project configuration.
 - Any commits not matching one of these patterns will not be categorized.
 
 ###### Breaking changes
