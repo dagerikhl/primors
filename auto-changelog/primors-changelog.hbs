@@ -60,7 +60,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - {{#if breaking}}**Breaking change:** {{/if}}{{subject}} {{#if href}}[`{{shorthash}}`]({{href}}){{/if}}
   {{/commit-list}}
 
-  {{#commit-list commits heading='### Commits' exclude='^(Feat(ure)?|Impr?(ovement)?|Perf(ormance)?|Doc(umentation|s)?|Build|Conf(ig(uration)?)?):'}}
+  {{#commit-list commits heading='### Tests' message='^Test(s|ing)?:'}}
+    - {{#if breaking}}**Breaking change:** {{/if}}{{subject}} {{#if href}}[`{{shorthash}}`]({{href}}){{/if}}
+  {{/commit-list}}
+
+  {{#commit-list commits heading='### Commits' exclude='^(Feat(ure)?|Impr?(ovement)?|Perf(ormance)?|Doc(umentation|s)?|Build|Conf(ig(uration)?)?|Test(s|ing)?):'}}
     - {{#if breaking}}**Breaking change:** {{/if}}{{subject}} {{#if href}}[`{{shorthash}}`]({{href}}){{/if}}
   {{/commit-list}}
 

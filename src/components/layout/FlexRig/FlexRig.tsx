@@ -77,7 +77,7 @@ const StyledRig = styled(Rig)<FlexRigProps & StyledOwnProps>`
 `;
 
 export const FlexRig: FC<FlexRigProps> = ({ wrap, children, ...rest }) => (
-  <StyledRig $wrap={wrap} {...rest}>
+  <StyledRig $wrap={wrap} {...rest} data-testid="flex-rig">
     {children}
   </StyledRig>
 );

@@ -97,11 +97,26 @@ This project uses auto-changelog to automatically generate a changelog. You can 
 - `Doc(umentation|s)?:`: Changes to documentation, e.g. `README.md` or the Storybook app.
 - `Build:`: Changes to the build or deploy environments.
 - `Conf(ig(uration)?)?:`: Changes to project configuration.
+- `Test(s|ing)?:`: Changes to test setup, test files, or new tests.
 - Any commits not matching one of these patterns will not be categorized.
 
 ###### Breaking changes
 
 You can mark any commit as a breaking change by writing "BREAKING CHANGE" anywhere in your commit message.
+
+### Testing
+
+This project tests its functionality with frontend unit tests, using Jest.
+
+To run tests for the project, run:
+
+```sh
+yarn test
+```
+
+#### Test coverage
+
+Testing the library also produces a test coverage report. To view this report, run the test and open `/coverage/lcov-report/index.html` in your browser.
 
 ### Linting
 
@@ -119,9 +134,13 @@ This library is built using:
 - [React](https://reactjs.org/).
 - [Styled Components](https://styled-components.com/).
 
+For testing and linting, these packages are used:
+
+- [Jest](https://jestjs.io/).
+- [ESLint](https://eslint.org/).
+
 For development, these comfort-packages are used:
 
-- [ESLint](https://eslint.org/).
 - [Prettier](https://prettier.io/).
 - [AutoChangelog](https://github.com/CookPete/auto-changelog/).
 

@@ -10,5 +10,5 @@
     "esModuleInterop": true
   },
   "include": ["src/**/*.tsx", "src/**/*.ts"],
-  "exclude": ["node_modules", "**/*.stories.*"]
+  "exclude": ["node_modules", "**/*.stories.*", "**/*.test.*"]
 }
