@@ -27,6 +27,19 @@ To run these processes manually, please see [Release](#release) below.
 
 ## Development
 
+### Quick-start (/TL;DR)
+
+Assumes owner of original repo or set up with similar repo structure.
+
+- Install: `yarn install`.
+- Develop and release:
+  1. Make changes.
+  2. Commit.
+  3. `yarn version`. (Creates a new release commit and CHANGELOG.)
+  4. `git push --follow-tags`. (Starts GH action to publish npm packages.)
+  5. `yarn deploy-storybook`. (Deploys SB to GH pages.)
+  6. **DONE**
+
 ### Getting started
 
 To install all dependencies, run:
@@ -65,9 +78,19 @@ To create a new version ready for publish and deploy, run:
 yarn version
 ```
 
-#### Publishing npm package
+After creating a new version, there are two choices:
 
-To build and publish a new version of the package, run:
+1. If repo is set up with GH actions and able to publish to npm, simply push the changes, _with tags_:
+   ```sh
+   git push --follow-tags
+   ```
+2. If not, follow [Publishing npm package locally](#publishing-npm-package-locally).
+
+#### Publishing npm package locally
+
+_Note: Because GH actions is set up, only `yarn version` is necessary if pushing to a GH repo set up with this action. The action will take care of publishing the package._
+
+That being said, to build and publish a new version of the package locally, run:
 
 ```sh
 yarn version
@@ -80,9 +103,12 @@ yarn publish
 
 #### Deploying Storybook app
 
+_Note: Ensure that Storybook is built before deploying it (i.e. `yarn build-storybook`)!_
+
 To build and deploy the Storybook live documentation app, run:
 
 ```sh
+yarn build-storybook
 yarn deploy-storybook
 ```
 
