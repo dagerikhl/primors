@@ -18,6 +18,7 @@ onCalculate?.(thisTsVariable * thisOtherVariable);\
   </Code>
 );
 export const Inline = Template.bind({});
+Inline.args = {};
 
 export const Block = Template.bind({});
 Block.args = {
