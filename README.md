@@ -103,12 +103,9 @@ yarn publish
 
 #### Deploying Storybook app
 
-_Note: Ensure that Storybook is built before deploying it (i.e. `yarn build-storybook`)!_
-
 To build and deploy the Storybook live documentation app, run:
 
 ```sh
-yarn build-storybook
 yarn deploy-storybook
 ```
 
